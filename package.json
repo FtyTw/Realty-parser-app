@@ -1,0 +1,50 @@
+{
+  "name": "Realty_parser_app",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "r-directory": "cd android/app/build/outputs/apk/release/ && open . && cd ../../../../../..",
+    "release": "cd android && ./gradlew assembleRelease && cd ..",
+    "deploy": "npm run release && npm run r-directory",
+    "get-lists": "scp kirov@35.233.157.22:/home/realtyparserapp/Parser-server/db/lists.json /Users/paulkirov/Documents/Realty-parser-app"
+  },
+  "dependencies": {
+    "@react-native-async-storage/async-storage": "^1.15.13",
+    "@react-navigation/bottom-tabs": "^6.0.9",
+    "@react-navigation/native": "^6.0.6",
+    "@react-navigation/native-stack": "^6.2.5",
+    "axios": "^0.24.0",
+    "react": "17.0.2",
+    "react-native": "0.66.2",
+    "react-native-onesignal": "^4.3.1",
+    "react-native-push-notification": "^8.1.1",
+    "react-native-safe-area-context": "^3.3.2",
+    "react-native-screens": "^3.9.0",
+    "react-native-vector-icons": "^9.0.0",
+    "react-native-webview": "^11.14.3",
+    "react-native-wheel-color-picker": "^1.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@babel/runtime": "^7.12.5",
+    "@react-native-community/eslint-config": "^2.0.0",
+    "babel-jest": "^26.6.3",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "jest": "^26.6.3",
+    "metro-react-native-babel-preset": "^0.66.2",
+    "react-test-renderer": "17.0.2"
+  },
+  "jest": {
+    "preset": "react-native"
+  }
+}
